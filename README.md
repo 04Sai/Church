@@ -15,7 +15,7 @@ Ensure you have the following installed:
 
 1. Clone the repository:
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/04Sai/Church.git
    cd Church
 2. Install Dependancies
     ```bash
