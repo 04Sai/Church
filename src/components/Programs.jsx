@@ -1,6 +1,8 @@
+import ProgramsCards from "./ProgramsCards";
+
 const Programs = () => {
   return (
-    <>
+    <div>
       <section className="section" id="programs">
         <article>
           <div className="container">
@@ -23,16 +25,8 @@ const Programs = () => {
           </div>
         </article>
       </section>
-      <section>
-        <article>
-          <div className="container">
-            <div className="column is-centered">
-              
-            </div>
-          </div>
-        </article>
-      </section>
-    </>
+      <ProgramsCards />
+    </div>
   );
 };
 

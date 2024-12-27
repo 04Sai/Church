@@ -1,4 +1,4 @@
-import gradpic from "../assets/gadpic.jpg";
+import gradpic from "../assets/images/gadpic.jpg";
 
 import { CiCircleCheck } from "react-icons/ci";
 const About = () => {

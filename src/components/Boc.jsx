@@ -1,6 +1,6 @@
-import bcbiboc from "../assets/bcbiboc.png";
-import brosh1 from "../assets/brosh1.jpg";
-import brosh2 from "../assets/brosh2.jpg";
+import bcbiboc from "../assets/images/bcbiboc.png";
+import brosh1 from "../assets/images/brosh1.jpg";
+import brosh2 from "../assets/images/brosh2.jpg";
 
 const Boc = () => {
   return (

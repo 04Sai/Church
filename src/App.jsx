@@ -3,6 +3,10 @@ import Hero from "./components/Hero";
 import About from "./components/About";
 import Boc from "./components/Boc";
 import Programs from "./components/Programs";
+import History from "./components/History";
+import Founder from "./components/Founder";
+import LiveReplay from "./components/LiveReplay";
+import Contact from "./components/Contact";
 
 const App = () => {
   return (
@@ -11,7 +15,11 @@ const App = () => {
       <Hero />
       <About />
       <Boc />
-      <Programs />
+      <Programs /> 
+      <History />
+      <Founder />
+      <LiveReplay />
+      <Contact />
     </>
   );
 };

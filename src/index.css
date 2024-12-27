@@ -8,7 +8,7 @@ html::-webkit-scrollbar {
 
 
 #home {
-  background-image: url(assets/new-hero-bg.jpg);
+  background-image: url(assets/images/new-hero-bg.jpg);
   background-position: center;
   background-size: cover;
 }
@@ -30,6 +30,7 @@ html::-webkit-scrollbar {
   border: 2px solid;
   border-color: black;
   width: 15rem;
+  margin: 1rem;
 }
 
 .box {
