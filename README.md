@@ -1,8 +1,27 @@
-# React + Vite
+# Brothers
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a group project for INSY55, creating a website using React for a church and school named "Brothers of Christ of Banneux, Inc". The website serves as an online platform, offering various pages and functionalities.
 
-Currently, two official plugins are available:
+## Project Overview
+The **Brothers of Christ of Banneux, Inc** website aims to provide information and resources to the church community and school members. The website features static pages including Home, About, About BOC, Programs, History, Watch Live Replay, and Contact. Additionally, it includes a static Login and Register page for access to the Student Portal.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Prerequisites
+
+Ensure you have the following installed:
+- [Node.js](https://nodejs.org/) (version 14 or above recommended)
+- npm (comes with Node.js)
+
+### Installation
+
+1. Clone the repository:
+   ```bash
+   git clone <repository-url>
+   cd Church
+2. Install Dependancies
+    ```bash
+   npm install
+### Development Server
+Start the dev server:
+  ```bash
+  npm run dev
+   
