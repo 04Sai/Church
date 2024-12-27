@@ -9,97 +9,96 @@ const ProgramsCards = () => {
         <article>
           <div className="container">
             <div className="columns is-centered">
-              <div className="column is-6 is-flex">
+              <div className="column is-half">
                 <div className="card">
                   <div className="card-image">
                     <figure className="image is-4by3">
-                        <img src={students} alt="PWD" />
+                      <img src={students} alt="PWD" />
                     </figure>
                     <div className="content">
                       <p className="title is-4 p-5 has-text-info">
                         Out of School Youth
                       </p>
-                      <p className="subtitle is-6 px-5 pb-5">
-                        <span className="icon-text">
-                          <span className="icon">
+                      <div className="subtitle is-6 px-5 pb-5">
+                        <div className="icon-text">
+                          <div className="icon">
                             <FaBullseye />
-                          </span>
-                          <span>
+                          </div>
+                          <div>
                             ALS for Junior High School and Elementary Level
-                          </span>
-                        </span>
-
-                        <span className="icon-text">
-                          <span className="icon">
+                          </div>
+                        </div>
+                        <div className="icon-text">
+                          <div className="icon">
                             <FaBullseye />
-                          </span>
-                          <span>
+                          </div>
+                          <div>
                             Electrical Installation and Maintenance NC II
-                          </span>
-                        </span>
-
-                        <span className="icon-text">
-                          <span className="icon">
+                          </div>
+                        </div>
+                        <div className="icon-text">
+                          <div className="icon">
                             <FaBullseye />
-                          </span>
-                          <span>
+                          </div>
+                          <div>
                             Shielded Metal Arc in Welding NC I and NC II
-                          </span>
-                        </span>
-                        <br />
-
-                        <span className="icon-text">
-                          <span className="icon">
+                          </div>
+                        </div>
+                        <div className="icon-text">
+                          <div className="icon">
                             <FaBullseye />
-                          </span>
-                          <span>Job Placement</span>
-                        </span>
-                      </p>
+                          </div>
+                          <div>Job Placement</div>
+                        </div>
+                        <br />
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
 
-              <div className="column is-6 is-flex">
+              <div className="column is-half">
                 <div className="card">
                   <div className="card-image">
                     <figure className="image is-4by3">
-                        <img src={pwd} alt="PWD" />
+                      <img src={pwd} alt="PWD" />
                     </figure>
                     <div className="content">
                       <p className="title is-4 p-5 has-text-info">
-                        Homelife Services
+                        Person with Disabilities and Elderly
                       </p>
-                      <p className="subtitle is-6 px-5 pb-5">
-                        <span className="icon-text">
-                          <span className="icon">
+                      <div className="subtitle is-6 px-5 pb-5">
+                        <div className="icon-text">
+                          <div className="icon">
                             <FaBullseye />
-                          </span>
-                          <span>Dietary Services</span>
-                        </span>
-
-                        <span className="icon-text">
-                          <span className="icon">
+                          </div>
+                          <div>Homelife Services</div>
+                        </div>
+                        <div className="icon-text">
+                          <div className="icon">
                             <FaBullseye />
-                          </span>
-                          <span>Health Services</span>
-                        </span>
-
-                        <span className="icon-text">
-                          <span className="icon">
+                          </div>
+                          <div>Dietary Services</div>
+                        </div>
+                        <div className="icon-text">
+                          <div className="icon">
                             <FaBullseye />
-                          </span>
-                          <span>Psychological Services</span>
-                        </span>
-                        <br />
-
-                        <span className="icon-text">
-                          <span className="icon">
+                          </div>
+                          <div>Health Services</div>
+                        </div>
+                        <div className="icon-text">
+                          <div className="icon">
                             <FaBullseye />
-                          </span>
-                          <span>Spiritual Services</span>
-                        </span>
-                      </p>
+                          </div>
+                          <div>Psychological Services</div>
+                        </div>
+                        <div className="icon-text">
+                          <div className="icon">
+                            <FaBullseye />
+                          </div>
+                          <div>Spiritual Services</div>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
