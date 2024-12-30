@@ -58,10 +58,10 @@ const NavBar = () => {
           <div className="navbar-item has-dropdown is-hoverable">
             <a className="navbar-link">Account</a>
             <div className="navbar-dropdown is-right">
-              <Link to="/login" className="navbar-item">
+              <Link to="/Login" className="navbar-item">
                 Login
               </Link>
-              <Link to="/register" className="navbar-item">
+              <Link to="/Register" className="navbar-item">
                 Register
               </Link>
               <Link to="/dashboard" className="navbar-item">

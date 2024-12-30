@@ -7,7 +7,6 @@ import History from "../components/History";
 import Founder from "../components/Founder";
 import LiveReplay from "../components/LiveReplay";
 import Contact from "../components/Contact";
-import Footer from "../components/Footer";
 
 const Home = () => {
   return (
