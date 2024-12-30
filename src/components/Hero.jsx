@@ -2,7 +2,7 @@ import logo from "../assets/images/logo.png";
 const Hero = () => {
   return (
     <>
-          <section className="section" id="home">
+      <section className="section" id="home">
         <div>
           <center>
             <br />
@@ -11,8 +11,8 @@ const Hero = () => {
             <img src={logo} alt="Logo" />
             <h1 className="has-text-white has-text-shadow-blue title is-1">
               Brothers of Christ of Banneux, Inc.
-                      </h1>
-                      <br />
+            </h1>
+            <br />
             <p className="subtitle has-text-white has-text-shadow-blue">
               Sharing Christ Home.
             </p>

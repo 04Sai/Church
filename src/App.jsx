@@ -1,29 +1,22 @@
-import NavBar from "./components/NavBar";
-import Hero from "./components/Hero";
-import About from "./components/About";
-import Boc from "./components/Boc";
-import Programs from "./components/Programs";
-import History from "./components/History";
-import Founder from "./components/Founder";
-import LiveReplay from "./components/LiveReplay";
-import Contact from "./components/Contact";
-import Footer from "./components/Footer";
+import {
+  Route,
+  createBrowserRouter,
+  createRoutesFromElements,
+  RouterProvider,
+} from "react-router-dom";
+import Home from "./pages/Home";
+import MainLayout from "./layouts/Mainlayout";
+
+const router = createBrowserRouter(
+  createRoutesFromElements(
+    <Route path="/" element={<MainLayout />}>
+      <Route index element={<Home />} />
+    </Route>
+  )
+);
 
 const App = () => {
-  return (
-    <>
-      <NavBar />
-      <Hero />
-      <About />
-      <Boc />
-      <Programs /> 
-      <History />
-      <Founder />
-      <LiveReplay />
-      <Contact />
-      <Footer />
-    </>
-  );
+  return <RouterProvider router={router} />;
 };
 
 export default App;

@@ -1,20 +1,33 @@
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import logo from "../assets/images/logo.png";
+import login from "../pages/login";
 
 const NavBar = () => {
+  const [isActive, setIsActive] = useState(false);
+
+  const toggleMenu = () => {
+    setIsActive(!isActive);
+  };
+
   return (
     <nav className="navbar is-spaced is-fixed-top is-info">
       <div className="navbar-brand mx-3">
-        <a href="App.jsx">
-                  <img src={ logo } width="50" />
+        <a href="#home">
+          <img src={logo} width="50" alt="Logo" />
         </a>
-        <a role="button" className="navbar-burger">
+        <a
+          role="button"
+          className={`navbar-burger ${isActive ? "is-active" : ""}`}
+          onClick={toggleMenu}
+        >
           <span aria-hidden="true"></span>
           <span aria-hidden="true"></span>
           <span aria-hidden="true"></span>
         </a>
       </div>
 
-      <div className="navbar-menu" id="navMenu">
+      <div className={`navbar-menu ${isActive ? "is-active" : ""}`} id="navMenu">
         <div className="navbar-start">
           <a href="#home" className="navbar-item ml-2">
             Home
@@ -46,15 +59,15 @@ const NavBar = () => {
           <div className="navbar-item has-dropdown is-hoverable">
             <a className="navbar-link">Account</a>
             <div className="navbar-dropdown is-right">
-              <a href="login.html" className="navbar-item">
+              <Link to="../pages/login" className="navbar-item">
                 Login
-              </a>
-              <a href="register.html" className="navbar-item">
+              </Link>
+              <Link to="/register" className="navbar-item">
                 Register
-              </a>
-              <a href="dashboard/index.html" className="navbar-item">
+              </Link>
+              <Link to="dashboard/index.html" className="navbar-item">
                 My Profile
-              </a>
+              </Link>
             </div>
           </div>
         </div>

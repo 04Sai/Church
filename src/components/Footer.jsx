@@ -6,9 +6,9 @@ const Footer = () => {
       <div className="container">
         <div className="columns">
           <div className="column is-3">
-            <p class="title is-3 has-text-weight-bold">BCBI</p>
-            <p class="subtitle is-6">Brothers of Christ of Banneux, Inc.</p>
-            <p class="subtitle is-6">© Copyright BCBI. All Rights Reserved</p>
+            <p className="title is-3 has-text-weight-bold">BCBI</p>
+            <p className="subtitle is-6">Brothers of Christ of Banneux, Inc.</p>
+            <p className="subtitle is-6">© Copyright BCBI. All Rights Reserved</p>
           </div>
           <div className="column is-4">
             <p className="is-6 has-text-weight-bold">Useful Links</p>
@@ -44,16 +44,16 @@ const Footer = () => {
             </div>
           </div>
           <div className="column is-5">
-            <p class="title is-6 has-text-weight-bold">Panel</p>
-            <div class="icon-text">
-              <span class="icon">
-                <i class="fas fa-chevron-right"></i>
+            <p className="title is-6 has-text-weight-bold">Panel</p>
+            <div className="icon-text">
+              <span className="icon">
+                <i className="fas fa-chevron-right"></i>
               </span>
               <a href="">Login</a>
             </div>
-            <div class="icon-text">
-              <span class="icon">
-                <i class="fas fa-chevron-right"></i>
+            <div className="icon-text">
+              <span className="icon">
+                <i className="fas fa-chevron-right"></i>
               </span>
               <a href="">Register</a>
             </div>
