@@ -1,11 +1,19 @@
-import { Outlet } from "react-router-dom"
+import { Outlet } from "react-router-dom";
+import Navigation from "../components/Navigation";
+import Footer from "../components/Footer";
 
-const Mainlayout = () => {
+const MainLayout = () => {
   return (
     <>
-      <Outlet />
+      <Navigation />
+      <main>
+        <Outlet />
+      </main>
+      <br />
+      <br />
+      <Footer />
     </>
-  )
-}
+  );
+};
 
-export default Mainlayout
+export default MainLayout;

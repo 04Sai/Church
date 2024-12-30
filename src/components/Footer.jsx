@@ -1,4 +1,5 @@
 import { FaChevronRight } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -16,7 +17,7 @@ const Footer = () => {
               <span className="icon">
                 <FaChevronRight />
               </span>
-              <a href="#home">Home</a>
+              <Link to="/">Home</Link>
             </div>
             <div className="icon-text">
               <span className="icon">
@@ -34,7 +35,7 @@ const Footer = () => {
               <span className="icon">
                 <FaChevronRight />
               </span>
-              <a href="#programs">Program</a>
+              <a href="#programs">Programs</a>
             </div>
             <div className="icon-text">
               <span className="icon">
@@ -47,15 +48,15 @@ const Footer = () => {
             <p className="title is-6 has-text-weight-bold">Panel</p>
             <div className="icon-text">
               <span className="icon">
-                <i className="fas fa-chevron-right"></i>
+                <FaChevronRight />
               </span>
-              <a href="">Login</a>
+              <Link to="/login">Login</Link>
             </div>
             <div className="icon-text">
               <span className="icon">
-                <i className="fas fa-chevron-right"></i>
+                <FaChevronRight />
               </span>
-              <a href="">Register</a>
+              <Link to="/register">Register</Link>
             </div>
           </div>
         </div>

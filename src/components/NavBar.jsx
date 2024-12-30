@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import logo from "../assets/images/logo.png";
-import login from "../pages/login";
 
 const NavBar = () => {
   const [isActive, setIsActive] = useState(false);
@@ -59,13 +58,13 @@ const NavBar = () => {
           <div className="navbar-item has-dropdown is-hoverable">
             <a className="navbar-link">Account</a>
             <div className="navbar-dropdown is-right">
-              <Link to="../pages/login" className="navbar-item">
+              <Link to="/login" className="navbar-item">
                 Login
               </Link>
               <Link to="/register" className="navbar-item">
                 Register
               </Link>
-              <Link to="dashboard/index.html" className="navbar-item">
+              <Link to="/dashboard" className="navbar-item">
                 My Profile
               </Link>
             </div>

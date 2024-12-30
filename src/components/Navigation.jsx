@@ -1,45 +1,45 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import logo from "../assets/images/logo.png";
 
 const Navigation = () => {
   return (
-    <nav class="navbar is-info is-fixed-top is-spaced" role="navigation">
-      <div class="navbar-brand mx-3">
-        <a href="#home">
+    <nav className="navbar is-info is-fixed-top is-spaced" role="navigation">
+      <div className="navbar-brand mx-3">
+        <Link to="/">
           <img src={logo} width="50" alt="Logo" />
-        </a>
+        </Link>
       </div>
 
-      <div class="navbar-menu" id="navMenu">
-        <div class="navbar-start">
-          <div class="navbar-item has-dropdown is-hoverable ml-2">
-            <a class="navbar-link">Main Website</a>
-            <div class="navbar-dropdown">
-              <Link to="index.html" class="navbar-item">
+      <div className="navbar-menu" id="navMenu">
+        <div className="navbar-start">
+          <div className="navbar-item has-dropdown is-hoverable ml-2">
+            <a className="navbar-link">Main Website</a>
+            <div className="navbar-dropdown">
+              <a href="/" className="navbar-item">
                 Home
-              </Link>
-              <Link to="index.html#about" class="navbar-item">
+              </a>
+              <a href="/" className="navbar-item">
                 About
-              </Link>
-              <Link to="index.html#boc" class="navbar-item">
+              </a>
+              <a href="/" className="navbar-item">
                 About BOC
-              </Link>
-              <Link to="index.html#programs" class="navbar-item">
+              </a>
+              <a href="/" className="navbar-item">
                 Programs
-              </Link>
-              <Link to="index.html#history" class="navbar-item">
+              </a>
+              <a href="/" className="navbar-item">
                 History
-              </Link>
-              <Link
-                href="index.html#watch-live"
-                class="navbar-item has-text-weight-bold has-text-danger-dark"
+              </a>
+              <a
+                href="/"
+                className="navbar-item has-text-weight-bold has-text-danger-dark"
               >
                 Watch Live
-              </Link>
-              <Link to="index.html#contact" class="navbar-item">
+              </a>
+              <a href="/" className="navbar-item">
                 Contact
-              </Link>
+              </a>
             </div>
           </div>
         </div>
