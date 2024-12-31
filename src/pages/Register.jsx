@@ -1,5 +1,9 @@
 import { Link } from "react-router-dom";
 import logo from "../assets/images/logo.png";
+import { FaFont, FaPhoneAlt, FaUser, FaKey, FaEnvelope } from "react-icons/fa";
+
+
+
 
 const Register = () => {
   return (
@@ -29,7 +33,7 @@ const Register = () => {
                             required
                           />
                           <span className="icon is-small is-left">
-                            <i className="fas fa-font"></i>
+                            <FaFont />
                           </span>
                         </p>
                       </div>
@@ -43,7 +47,7 @@ const Register = () => {
                             required
                           />
                           <span className="icon is-small is-left">
-                            <i className="fas fa-font"></i>
+                            <FaFont />
                           </span>
                         </p>
                       </div>
@@ -59,7 +63,7 @@ const Register = () => {
                         required
                       />
                       <span className="icon is-small is-left">
-                        <i className="fas fa-phone-alt"></i>
+                        <FaPhoneAlt />
                       </span>
                     </p>
                   </div>
@@ -73,7 +77,7 @@ const Register = () => {
                         required
                       />
                       <span className="icon is-small is-left">
-                        <i className="fas fa-user-alt"></i>
+                        <FaUser />
                       </span>
                     </p>
                   </div>
@@ -87,7 +91,7 @@ const Register = () => {
                         required
                       />
                       <span className="icon is-small is-left">
-                        <i className="fas fa-envelope"></i>
+                        <FaEnvelope />
                       </span>
                     </p>
                   </div>
@@ -101,7 +105,7 @@ const Register = () => {
                         required
                       />
                       <span className="icon is-small is-left">
-                        <i className="fas fa-key"></i>
+                        <FaKey />
                       </span>
                     </p>
                   </div>
@@ -115,7 +119,7 @@ const Register = () => {
                         required
                       />
                       <span className="icon is-small is-left">
-                        <i className="fas fa-key"></i>
+                        <FaKey />
                       </span>
                     </p>
                   </div>
