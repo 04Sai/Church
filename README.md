@@ -1,4 +1,4 @@
-# Brothers
+# Brothers of Crhist of Banneux Inc.
 
 This is a group project for INSY55, creating a website using React for a church and school named "Brothers of Christ of Banneux, Inc". The website serves as an online platform, offering various pages and functionalities.
 
