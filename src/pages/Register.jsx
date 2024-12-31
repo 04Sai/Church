@@ -1,12 +1,9 @@
-import React from "react";
 import { Link } from "react-router-dom";
-import Navigation from "../components/Navigation";
 import logo from "../assets/images/logo.png";
 
 const Register = () => {
   return (
     <div>
-      <Navigation />
       <section className="section" id="home">
         <div className="has-text-centered fade-in">
           <img className="py-6" src={logo} alt="Logo" />

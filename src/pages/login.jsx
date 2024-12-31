@@ -1,16 +1,11 @@
-import React from "react";
 import { Link } from "react-router-dom";
-import Navigation from "../components/Navigation";
 import logo from "../assets/images/logo.png";
 import { FaUser } from "react-icons/fa";
 import { MdOutlinePassword } from "react-icons/md";
 
-
-
 const Login = () => {
   return (
     <div>
-      <Navigation />
       <section className="section" id="home">
         <div className="has-text-centered fade-in">
           <img className="py-6" src={logo} alt="Logo" />
@@ -44,7 +39,7 @@ const Login = () => {
                         Login
                       </button>
                       <Link to="/register" className="button">
-                        Register
+                        Register?
                       </Link>
                     </p>
                   </div>

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import logo from "../assets/images/logo.png";
 
@@ -26,7 +26,10 @@ const NavBar = () => {
         </a>
       </div>
 
-      <div className={`navbar-menu ${isActive ? "is-active" : ""}`} id="navMenu">
+      <div
+        className={`navbar-menu ${isActive ? "is-active" : ""}`}
+        id="navMenu"
+      >
         <div className="navbar-start">
           <a href="#home" className="navbar-item ml-2">
             Home

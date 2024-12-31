@@ -1,4 +1,3 @@
-import NavBar from "../components/NavBar";
 import Hero from "../components/Hero";
 import About from "../components/About";
 import Boc from "../components/Boc";
@@ -11,7 +10,6 @@ import Contact from "../components/Contact";
 const Home = () => {
   return (
     <>
-      <NavBar />
       <Hero />
       <About />
       <Boc />

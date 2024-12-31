@@ -1,7 +1,8 @@
 import { Link } from "react-router-dom";
-import logo from "../assets/images/logo.png";
+import logo from "../../assets/images/logo.png";
+import { MdOutlineLogout } from "react-icons/md";
 
-const Navigation = () => {
+const AccountNav = () => {
   return (
     <nav className="navbar is-info is-fixed-top is-spaced" role="navigation">
       <div className="navbar-brand mx-3">
@@ -43,8 +44,18 @@ const Navigation = () => {
           </div>
         </div>
       </div>
+      <div className="navbar-end">
+        <a className="navbar-item p-4">
+          <div className="icon-text has-text-danger">
+            <span className="icon">
+              <MdOutlineLogout />
+            </span>
+            <p className="has-text-weight-bold">Logout</p>
+          </div>
+        </a>
+      </div>
     </nav>
   );
 };
 
-export default Navigation;
+export default AccountNav;
