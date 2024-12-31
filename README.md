@@ -26,7 +26,6 @@ Ensure you have the following installed:
 4. Install icons
    ```bash
    npm i react-icons
-   npm i --save @fortawesome/react-fontawesome@latest
 ### Development Server
 Start the dev server:
   ```bash
