@@ -25,7 +25,7 @@ Ensure you have the following installed:
    npm install bulma
 4. Install icons
    ```bash
-   npm i --save @fortawesome/fontawesome-svg-core
+   npm i react-icons
    npm i --save @fortawesome/react-fontawesome@latest
 ### Development Server
 Start the dev server:
