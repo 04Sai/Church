@@ -28,7 +28,7 @@ const Contact = () => {
             <p className="title is-1 has-text-info center">Contact Us</p>
             <div className="columns">
               <div className="column is-4">
-                <div className="box">
+                <div className="box m-3">
                   <p className="title is-4">Get in touch</p>
                   <p className="subtitle is-6">
                     You can contact us through the following:

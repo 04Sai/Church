@@ -23,7 +23,7 @@ const Dashboard = () => {
                     {/* Tile 1 */}
                     <div className="tile is-parent">
                       <article className="tile is-child box notification is-primary mb-3">
-                        <p className="title is-4">2022 - 2023</p>
+                        <p className="title is-4">2024 - 2025</p>
                         <p className="subtitle">Academic Year</p>
                       </article>
                     </div>

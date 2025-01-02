@@ -1,17 +1,36 @@
 import { Link } from "react-router-dom";
 import logo from "../../assets/images/logo.png";
 import { MdOutlineLogout } from "react-icons/md";
+import { useState } from "react";
 
 const AccountNav = () => {
+  const [isActive, setIsActive] = useState(false);
+
+  const toggleBurger = () => {
+    setIsActive(!isActive);
+  };
+
   return (
     <nav className="navbar is-info is-fixed-top is-spaced" role="navigation">
       <div className="navbar-brand mx-3">
         <Link to="/">
           <img src={logo} width="50" alt="Logo" />
         </Link>
+
+        <a
+          role="button"
+          className={`navbar-burger ${isActive ? 'is-active' : ''}`}
+          aria-label="menu"
+          aria-expanded="false"
+          onClick={toggleBurger}
+        >
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
       </div>
 
-      <div className="navbar-menu" id="navMenu">
+      <div className={`navbar-menu ${isActive ? 'is-active' : ''}`} id="navMenu">
         <div className="navbar-start">
           <div className="navbar-item has-dropdown is-hoverable ml-2">
             <a className="navbar-link">Main Website</a>
@@ -42,17 +61,28 @@ const AccountNav = () => {
               </a>
             </div>
           </div>
-        </div>
-      </div>
-      <div className="navbar-end">
-        <a className="navbar-item p-4">
-          <div className="icon-text has-text-danger">
-            <span className="icon">
-              <MdOutlineLogout />
-            </span>
-            <p className="has-text-weight-bold">Logout</p>
+          {/* Add Logout button for mobile view */}
+          <div className="navbar-item is-hidden-tablet">
+            <div className="icon-text has-text-danger">
+              <span className="icon">
+                <MdOutlineLogout />
+              </span>
+              <p className="has-text-weight-bold">Logout</p>
+            </div>
           </div>
-        </a>
+        </div>
+        
+        {/* Keep Logout button for desktop view */}
+        <div className="navbar-end is-hidden-mobile">
+          <a className="navbar-item p-4">
+            <div className="icon-text has-text-danger">
+              <span className="icon">
+                <MdOutlineLogout />
+              </span>
+              <p className="has-text-weight-bold">Logout</p>
+            </div>
+          </a>
+        </div>
       </div>
     </nav>
   );

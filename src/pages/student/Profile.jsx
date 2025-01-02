@@ -33,7 +33,12 @@ const Profile = () => {
                             <div className="field-body mr-6">
                               <div className="field">
                                 <div className="control">
-                                  <input className="input" type="text" value="LANCE" disabled />
+                                  <input
+                                    className="input"
+                                    type="text"
+                                    value="LANCE"
+                                    disabled
+                                  />
                                 </div>
                               </div>
                             </div>
@@ -46,7 +51,30 @@ const Profile = () => {
                             <div className="field-body mr-6">
                               <div className="field">
                                 <div className="control">
-                                  <input className="input" type="text" value="LISTANA" disabled />
+                                  <input
+                                    className="input"
+                                    type="text"
+                                    value="LISTANA"
+                                    disabled
+                                  />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div className="field is-horizontal">
+                            <div className="field-label is-normal">
+                              <label className="label">Sex:</label>
+                            </div>
+                            <div className="field-body mr-6">
+                              <div className="field">
+                                <div className="control">
+                                  <input
+                                    className="input"
+                                    type="text"
+                                    value="HELL YEAH!"
+                                    disabled
+                                  />
                                 </div>
                               </div>
                             </div>
@@ -75,7 +103,12 @@ const Profile = () => {
                                   <a className="button is-static">+63</a>
                                 </div>
                                 <div className="control is-expanded">
-                                  <input className="input" id="phone-input" type="number" defaultValue="9123456789" />
+                                  <input
+                                    className="input"
+                                    id="phone-input"
+                                    type="number"
+                                    defaultValue="9123456789"
+                                  />
                                 </div>
                               </div>
                             </div>
@@ -88,8 +121,8 @@ const Profile = () => {
                             <div className="field-body mr-6">
                               <div className="field">
                                 <div className="control">
-                                  <textarea 
-                                    className="textarea" 
+                                  <textarea
+                                    className="textarea"
                                     rows="2"
                                     defaultValue="Brgy.Biclatan, Gen Tri, 4107 Cavite"
                                   />
@@ -99,7 +132,9 @@ const Profile = () => {
                           </div>
 
                           <div className="buttons is-right mr-6">
-                            <button className="button is-info zoom">Submit Changes</button>
+                            <button className="button is-info zoom">
+                              Submit Changes
+                            </button>
                           </div>
                         </div>
                       </div>

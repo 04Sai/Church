@@ -10,7 +10,7 @@ const ProgramsCards = () => {
           <div className="container">
             <div className="columns is-centered">
               <div className="column is-half">
-                <div className="card">
+                <div className="card m-1">
                   <div className="card-image">
                     <figure className="image is-4by3">
                       <img src={students} alt="PWD" />
@@ -58,7 +58,7 @@ const ProgramsCards = () => {
               </div>
 
               <div className="column is-half">
-                <div className="card">
+                <div className="card m-1">
                   <div className="card-image">
                     <figure className="image is-4by3">
                       <img src={pwd} alt="PWD" />

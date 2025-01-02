@@ -1,9 +1,7 @@
 import { Link } from "react-router-dom";
 import logo from "../assets/images/logo.png";
 import { FaFont, FaPhoneAlt, FaUser, FaKey, FaEnvelope } from "react-icons/fa";
-
-
-
+import { BsGenderAmbiguous } from "react-icons/bs";
 
 const Register = () => {
   return (
@@ -53,6 +51,31 @@ const Register = () => {
                       </div>
                     </div>
                   </div>
+
+                  <div className="field mb-4">
+                    <p className="control has-icons-left">
+                      <div className="select is-fullwidth">
+                        <select
+                          name="sex"
+                          required
+                          defaultValue=""
+                          style={{ paddingLeft: "2.5em" }}
+                        >
+                          <option value="" disabled>
+                            Select Gender
+                          </option>
+                          <option value="male">Male</option>
+                          <option value="female">Female</option>
+                          <option value="other">Prefer not to say</option>
+                          <option value="nigga">Nigga</option>
+                        </select>
+                      </div>
+                      <span className="icon is-small is-left">
+                        <BsGenderAmbiguous />
+                      </span>
+                    </p>
+                  </div>
+
                   <div className="field mb-4">
                     <p className="control has-icons-left">
                       <input
