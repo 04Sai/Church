@@ -4,6 +4,7 @@ import {
   createRoutesFromElements,
   RouterProvider,
 } from "react-router-dom";
+import React, { useEffect, useState } from "react";
 import Home from "./pages/Home";
 import MainLayout from "./layouts/MainLayout";
 import Login from "./pages/Login";
@@ -34,6 +35,27 @@ const router = createBrowserRouter(
 );
 
 const App = () => {
+  const [backendData, setBackendData] = useState({ users: [] });
+  const fetchedRef = React.useRef(false);
+
+  useEffect(() => {
+    if (fetchedRef.current) return;
+    fetchedRef.current = true;
+
+    fetch("/api")
+      .then((response) => {
+        if (!response.ok) throw new Error('Network response was not ok');
+        return response.json();
+      })
+      .then((data) => {
+        console.log("Received data:", data);
+        setBackendData(data);
+      })
+      .catch((error) => {
+        console.error("Error fetching data:", error);
+      });
+  }, []);
+
   return <RouterProvider router={router} />;
 };
 

@@ -1,9 +1,54 @@
-import { Link } from "react-router-dom";
+import { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import logo from "../assets/images/logo.png";
 import { FaFont, FaPhoneAlt, FaUser, FaKey, FaEnvelope } from "react-icons/fa";
 import { BsGenderAmbiguous } from "react-icons/bs";
 
 const Register = () => {
+  const navigate = useNavigate();
+  const [formData, setFormData] = useState({
+    firstname: "",
+    lastname: "",
+    sex: "",
+    phone: "",
+    username: "",
+    email: "",
+    password: "",
+    confirmpassword: "",
+  });
+  const [error, setError] = useState("");
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setError("");
+
+    try {
+      const response = await fetch("http://localhost:1337/api/register", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.error || "Registration failed");
+      }
+
+      // Registration successful
+      alert("Registration successful!");
+      navigate("/login");
+    } catch (err) {
+      setError(err.message);
+    }
+  };
+
   return (
     <div>
       <section className="section" id="home">
@@ -18,7 +63,10 @@ const Register = () => {
                 <p className="subtitle is-6 center">
                   Brothers of Christ of Banneux, Inc.
                 </p>
-                <form>
+                {error && (
+                  <div className="notification is-danger is-light">{error}</div>
+                )}
+                <form onSubmit={handleSubmit}>
                   <div className="field is-horizontal">
                     <div className="field-body mb-4">
                       <div className="field">
@@ -27,6 +75,8 @@ const Register = () => {
                             className="input"
                             type="text"
                             name="firstname"
+                            value={formData.firstname}
+                            onChange={handleChange}
                             placeholder="First Name"
                             required
                           />
@@ -41,6 +91,8 @@ const Register = () => {
                             className="input"
                             type="text"
                             name="lastname"
+                            value={formData.lastname}
+                            onChange={handleChange}
                             placeholder="Last Name"
                             required
                           />
@@ -57,6 +109,8 @@ const Register = () => {
                       <div className="select is-fullwidth">
                         <select
                           name="sex"
+                          value={formData.sex}
+                          onChange={handleChange}
                           required
                           defaultValue=""
                           style={{ paddingLeft: "2.5em" }}
@@ -67,7 +121,6 @@ const Register = () => {
                           <option value="male">Male</option>
                           <option value="female">Female</option>
                           <option value="other">Prefer not to say</option>
-                          <option value="nigga">Nigga</option>
                         </select>
                       </div>
                       <span className="icon is-small is-left">
@@ -82,6 +135,8 @@ const Register = () => {
                         className="input"
                         type="number"
                         name="phone"
+                        value={formData.phone}
+                        onChange={handleChange}
                         placeholder="Phone Number"
                         required
                       />
@@ -96,6 +151,8 @@ const Register = () => {
                         className="input"
                         type="text"
                         name="username"
+                        value={formData.username}
+                        onChange={handleChange}
                         placeholder="Username"
                         required
                       />
@@ -110,6 +167,8 @@ const Register = () => {
                         className="input"
                         type="email"
                         name="email"
+                        value={formData.email}
+                        onChange={handleChange}
                         placeholder="Email"
                         required
                       />
@@ -124,6 +183,8 @@ const Register = () => {
                         className="input"
                         type="password"
                         name="password"
+                        value={formData.password}
+                        onChange={handleChange}
                         placeholder="Password"
                         required
                       />
@@ -138,6 +199,8 @@ const Register = () => {
                         className="input"
                         type="password"
                         name="confirmpassword"
+                        value={formData.confirmpassword}
+                        onChange={handleChange}
                         placeholder="Confirm Password"
                         required
                       />

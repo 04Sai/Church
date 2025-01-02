@@ -1,9 +1,51 @@
-import { Link } from "react-router-dom";
+import { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import logo from "../assets/images/logo.png";
 import { FaUser } from "react-icons/fa";
 import { MdOutlinePassword } from "react-icons/md";
 
 const Login = () => {
+  const navigate = useNavigate();
+  const [formData, setFormData] = useState({
+    username: "",
+    password: "",
+  });
+  const [error, setError] = useState("");
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setError("");
+
+    try {
+      const response = await fetch("http://localhost:1337/api/login", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.error || "Login failed");
+      }
+
+      // Store user data in localStorage or context if needed
+      localStorage.setItem("user", JSON.stringify(data.user));
+      
+      // Login successful
+      alert("Login successful!");
+      navigate("/dashboard"); // or wherever you want to redirect after login
+    } catch (err) {
+      setError(err.message);
+    }
+  };
+
   return (
     <div>
       <section className="section" id="home">
@@ -16,10 +58,21 @@ const Login = () => {
               <div className="container content is-large">
                 <p className="title is-3 center">Login</p>
                 <p className="subtitle is-6 center">Brothers of Christ of Banneux, Inc.</p>
-                <form>
+                {error && (
+                  <div className="notification is-danger is-light">{error}</div>
+                )}
+                <form onSubmit={handleSubmit}>
                   <div className="field my-4">
                     <p className="control has-icons-left">
-                      <input className="input" type="text" name="username" placeholder="Username" required />
+                      <input 
+                        className="input" 
+                        type="text" 
+                        name="username" 
+                        value={formData.username}
+                        onChange={handleChange}
+                        placeholder="Username" 
+                        required 
+                      />
                       <span className="icon is-small is-left">
                         <FaUser />
                       </span>
@@ -27,7 +80,15 @@ const Login = () => {
                   </div>
                   <div className="field my-4">
                     <p className="control has-icons-left">
-                      <input className="input" type="password" name="password" placeholder="Password" required />
+                      <input 
+                        className="input" 
+                        type="password" 
+                        name="password"
+                        value={formData.password}
+                        onChange={handleChange}
+                        placeholder="Password" 
+                        required 
+                      />
                       <span className="icon is-small is-left">
                         <MdOutlinePassword />
                       </span>
