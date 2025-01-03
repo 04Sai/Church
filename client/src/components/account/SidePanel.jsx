@@ -3,8 +3,11 @@ import { useLocation } from "react-router-dom";
 
 const SidePanel = () => {
   const location = useLocation();
-  const name = "Lance Listana";
-  const id = "136000123";
+  const user = JSON.parse(localStorage.getItem("user") || "{}");
+  const name = user.firstname && user.lastname 
+    ? `${user.firstname} ${user.lastname}` 
+    : "Guest User";
+  const id = user.id || "N/A";
 
   // Menu items categorized
   const menuItems = {
@@ -34,7 +37,9 @@ const SidePanel = () => {
           {menuItems.General.map((item, index) => (
             <li key={index}>
               <a
-                className={`has-text-centered ${isActive(item) ? "is-active" : ""}`}
+                className={`has-text-centered ${
+                  isActive(item) ? "is-active" : ""
+                }`}
                 href={`/${item.toLowerCase().replace(" ", "-")}`}
               >
                 {item}
@@ -49,7 +54,9 @@ const SidePanel = () => {
           {menuItems.Transaction.map((item, index) => (
             <li key={index}>
               <a
-                className={`has-text-centered ${isActive(item) ? "is-active" : ""}`}
+                className={`has-text-centered ${
+                  isActive(item) ? "is-active" : ""
+                }`}
                 href={`/${item.toLowerCase().replace(" ", "-")}`}
               >
                 {item}
@@ -64,7 +71,9 @@ const SidePanel = () => {
           {menuItems.Portal.map((item, index) => (
             <li key={index}>
               <a
-                className={`has-text-centered ${isActive(item) ? "is-active" : ""}`}
+                className={`has-text-centered ${
+                  isActive(item) ? "is-active" : ""
+                }`}
                 href={`/${item.toLowerCase().replace(" ", "-")}`}
               >
                 {item}

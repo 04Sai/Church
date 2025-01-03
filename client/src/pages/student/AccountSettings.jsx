@@ -3,6 +3,8 @@ import SidePanel from "../../components/account/SidePanel";
 import QuickLinks from "../../components/account/QuickLinks";
 
 const AccountSettings = () => {
+  const user = JSON.parse(localStorage.getItem('user') || '{}');
+
   return (
     <section className="section">
       <AccountHeader />
@@ -31,14 +33,25 @@ const AccountSettings = () => {
                               <div className="field">
                                 <label className="label">Username</label>
                                 <div className="control">
-                                  <input type="text" className="input" defaultValue="lancelovesgod" placeholder="Enter Username" />
+                                  <input 
+                                    type="text" 
+                                    className="input" 
+                                    defaultValue={user.username || ''} 
+                                    placeholder="Enter Username" 
+                                  />
                                 </div>
                               </div>
 
                               <label className="label">Email</label>
                               <div className="field has-addons">
                                 <p className="control is-expanded">
-                                  <input className="input" type="text" defaultValue="lance.listana" placeholder="Your email" disabled />
+                                  <input 
+                                    className="input" 
+                                    type="text" 
+                                    defaultValue={user.email?.split('@')[0] || ''} 
+                                    placeholder="Your email" 
+                                    disabled 
+                                  />
                                 </p>
                                 <p className="control">
                                   <a className="button is-static">@bcbi.org</a>

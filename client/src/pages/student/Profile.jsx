@@ -3,6 +3,8 @@ import SidePanel from "../../components/account/SidePanel";
 import QuickLinks from "../../components/account/QuickLinks";
 
 const Profile = () => {
+  const user = JSON.parse(localStorage.getItem("user") || "{}");
+
   return (
     <section className="section">
       <AccountHeader />
@@ -36,7 +38,7 @@ const Profile = () => {
                                   <input
                                     className="input"
                                     type="text"
-                                    value="LANCE"
+                                    value={user.firstname || ''}
                                     disabled
                                   />
                                 </div>
@@ -54,7 +56,7 @@ const Profile = () => {
                                   <input
                                     className="input"
                                     type="text"
-                                    value="LISTANA"
+                                    value={user.lastname || ''}
                                     disabled
                                   />
                                 </div>
@@ -72,7 +74,7 @@ const Profile = () => {
                                   <input
                                     className="input"
                                     type="text"
-                                    value="HELL YEAH!"
+                                    value={user.sex || ''}
                                     disabled
                                   />
                                 </div>
@@ -107,7 +109,7 @@ const Profile = () => {
                                     className="input"
                                     id="phone-input"
                                     type="number"
-                                    defaultValue="9123456789"
+                                    defaultValue={user.phone || ''}
                                   />
                                 </div>
                               </div>
