@@ -47,12 +47,6 @@ const NavBar = () => {
           <a href="#history" className="navbar-item ml-2">
             History
           </a>
-          <a
-            href="#watch-live"
-            className="navbar-item has-text-weight-bold has-text-danger ml-2"
-          >
-            Watch Live
-          </a>
           <a href="#contact" className="navbar-item ml-2">
             Contact
           </a>

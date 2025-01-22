@@ -4,7 +4,6 @@ import Boc from "../components/Boc";
 import Programs from "../components/Programs";
 import History from "../components/History";
 import Founder from "../components/Founder";
-import LiveReplay from "../components/LiveReplay";
 import Contact from "../components/Contact";
 
 const Home = () => {
@@ -16,7 +15,6 @@ const Home = () => {
       <Programs />
       <History />
       <Founder />
-      <LiveReplay />
       <Contact />
     </>
   );

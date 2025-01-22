@@ -6,7 +6,6 @@ html::-webkit-scrollbar {
   display: none;
 }
 
-
 #home {
   background-image: url(assets/images/new-hero-bg.jpg);
   background-position: center;
@@ -33,7 +32,6 @@ html::-webkit-scrollbar {
   margin: 1rem;
 }
 
-
 .card-image {
   display: block;
   position: relative;
@@ -42,7 +40,8 @@ html::-webkit-scrollbar {
 .card {
   background-color: white;
   border-radius: 0.25rem;
-  box-shadow: 0 0.5em 1em -0.125em rgba(10, 10, 10, 0.1), 0 0px 0 1px rgba(10, 10, 10, 0.02);
+  box-shadow: 0 0.5em 1em -0.125em rgba(10, 10, 10, 0.1),
+    0 0px 0 1px rgba(10, 10, 10, 0.02);
   color: #4a4a4a;
   max-width: 100%;
   position: relative;
@@ -54,5 +53,15 @@ footer {
 }
 
 main {
-  padding-top:  4rem;
+  padding-top: 4rem;
+}
+
+.vertical-lines {
+  background-color: #66d1ff;
+  border-radius: 1rem;
+  width: 12px;
+  height: 12px;
+  position: absolute;
+  left: -29px;
+  top: 5px;
 }

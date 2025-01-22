@@ -49,12 +49,7 @@ const Navigation = () => {
               <a href="/" className="navbar-item">
                 History
               </a>
-              <a
-                href="/"
-                className="navbar-item has-text-weight-bold has-text-danger-dark"
-              >
-                Watch Live
-              </a>
+              
               <a href="/" className="navbar-item">
                 Contact
               </a>
