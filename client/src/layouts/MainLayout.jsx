@@ -3,6 +3,7 @@ import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
 import NavBar from "../components/NavBar";
 import AccountNav from "../components/account/AccountNav";
+import AccountFooter from "../components/account/AccountFooter";
 
 const MainLayout = () => {
   const location = useLocation();
@@ -15,18 +16,25 @@ const MainLayout = () => {
   const isAccount = location.pathname === "/account";
   const isRegistration = location.pathname === "/registration";
 
+  const isAccountPage =
+    isDashboard ||
+    isProfile ||
+    isGrades ||
+    isSubjects ||
+    isBalance ||
+    isAccount ||
+    isRegistration;
+
   return (
     <>
       {isHomepage && <NavBar />}
-      {(isDashboard || isProfile || isGrades || isSubjects || 
-        isBalance || isAccount || isRegistration) && <AccountNav />}
-      
-      {!isHomepage && !isDashboard && !isProfile && !isGrades && 
-       !isSubjects && !isBalance && !isAccount && !isRegistration && <Navigation />}
+      {isAccountPage && <AccountNav />}
+
+      {!isHomepage && !isAccountPage && <Navigation />}
       <main>
         <Outlet />
       </main>
-      <Footer />
+      {isAccountPage ? <AccountFooter /> : <Footer />}
     </>
   );
 };

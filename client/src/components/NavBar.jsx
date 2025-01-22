@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import logo from "../assets/images/logo.png";
+import { FaSignInAlt, FaUserPlus } from "react-icons/fa";
 
 const NavBar = () => {
   const [isActive, setIsActive] = useState(false);
@@ -55,20 +56,29 @@ const NavBar = () => {
           <a href="#contact" className="navbar-item ml-2">
             Contact
           </a>
+          {/* Mobile-only login/register buttons */}
+          <div className="is-hidden-tablet">
+            <p className="subtitle menu-label ml-3">Account</p>
+            <Link to="/Login" className="navbar-item ml-2">
+              <FaSignInAlt fontSize="1em" className="mr-2" />
+              Login
+            </Link>
+            <Link to="/Register" className="navbar-item ml-2">
+              <FaUserPlus fontSize="1em" className="mr-2" />
+              Register
+            </Link>
+          </div>
         </div>
 
-        <div className="navbar-end mx-3">
-          <div className="navbar-item has-dropdown is-hoverable">
-            <a className="navbar-link">Account</a>
-            <div className="navbar-dropdown is-right">
-              <Link to="/Login" className="navbar-item">
+        <div className="navbar-end mx-1">
+          {/* Desktop-only login/register buttons */}
+          <div className="navbar-item is-hidden-mobile">
+            <div className="buttons">
+              <Link to="/Login" className="button is-info">
                 Login
               </Link>
-              <Link to="/Register" className="navbar-item">
+              <Link to="/Register" className="button is-link">
                 Register
-              </Link>
-              <Link to="/dashboard" className="navbar-item">
-                My Profile
               </Link>
             </div>
           </div>

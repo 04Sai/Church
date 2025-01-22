@@ -11,7 +11,7 @@ const Profile = () => {
       <div className="container mt-5">
         <div className="columns">
           {/* SidePanel */}
-          <div className="column is-2">
+          <div className="column is-2 is-hidden-mobile">
             <SidePanel />
           </div>
 

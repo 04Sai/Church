@@ -1,16 +1,12 @@
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import logo from "../../assets/images/logo.png";
 import { MdOutlineLogout } from "react-icons/md";
 import { useState } from "react";
+import SidePanel from "./SidePanel";
 
 const AccountNav = () => {
-  const [isActive, setIsActive] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const navigate = useNavigate();
-
-  const toggleBurger = () => {
-    setIsActive(!isActive);
-  };
 
   const handleLogout = () => {
     setIsModalOpen(true);
@@ -25,75 +21,18 @@ const AccountNav = () => {
   return (
     <>
       <nav className="navbar is-info is-fixed-top is-spaced" role="navigation">
-        <div className="navbar-brand mx-3">
-          <Link to="/">
+        <div className="navbar-brand mx-3 mb-2">
             <img src={logo} width="50" alt="Logo" />
-          </Link>
-
-          <a
-            role="button"
-            className={`navbar-burger ${isActive ? "is-active" : ""}`}
-            aria-label="menu"
-            aria-expanded="false"
-            onClick={toggleBurger}
-          >
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-          </a>
         </div>
 
-        <div
-          className={`navbar-menu ${isActive ? "is-active" : ""}`}
-          id="navMenu"
-        >
-          <div className="navbar-start">
-            <div className="navbar-item has-dropdown is-hoverable ml-2">
-              <a className="navbar-link">Main Website</a>
-              <div className="navbar-dropdown">
-                <a href="/" className="navbar-item">
-                  Home
-                </a>
-                <a href="/" className="navbar-item">
-                  About
-                </a>
-                <a href="/" className="navbar-item">
-                  About BOC
-                </a>
-                <a href="/" className="navbar-item">
-                  Programs
-                </a>
-                <a href="/" className="navbar-item">
-                  History
-                </a>
-                <a
-                  href="/"
-                  className="navbar-item has-text-weight-bold has-text-danger-dark"
-                >
-                  Watch Live
-                </a>
-                <a href="/" className="navbar-item">
-                  Contact
-                </a>
-              </div>
-            </div>
-            {/* Add Logout button for mobile view */}
-            <div className="navbar-item is-hidden-tablet">
-              <div
-                className="icon-text has-text-danger"
-                onClick={handleLogout}
-                style={{ cursor: "pointer" }}
-              >
-                <span className="icon">
-                  <MdOutlineLogout />
-                </span>
-                <p className="has-text-weight-bold">Logout</p>
-              </div>
-            </div>
+        <div className="navbar-end">
+          {/* Mobile Menu Button */}
+          <div className="is-hidden-tablet">
+            <SidePanel />
           </div>
 
-          {/* Keep Logout button for desktop view */}
-          <div className="navbar-end is-hidden-mobile">
+          {/* Desktop Logout button */}
+          <div className="is-hidden-mobile">
             <a
               className="navbar-item p-4"
               onClick={handleLogout}
