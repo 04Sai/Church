@@ -11,19 +11,21 @@ const QuickLinks = () => {
         </header>
         <div className="card-content has-text-centered content">
           <figure className="image is-128x128 is-inline-block">
-            <a href="/">
+            <a href="/" className="has-text-danger">
               <img src={logo} alt="" />
               Main Website
             </a>
           </figure>
           <figure className="image is-128x128 is-inline-block">
-            <a href="https://fb.me/BOCPhilippines">
+            {/* <a href="https://fb.me/BOCPhilippines"> */}
+            <a>
               <img src={bcbiboc} alt="" />
               BCBI Page
             </a>
           </figure>
           <figure className="image is-128x128 is-inline-block">
-            <a href="https://fb.me/bocmemories">
+            {/* <a href="https://fb.me/bocmemories"> */}
+            <a>
               <img src={bocmem} alt="" />
               BOC Memories
             </a>

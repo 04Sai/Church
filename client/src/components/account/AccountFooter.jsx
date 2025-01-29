@@ -66,7 +66,7 @@ const Footer = () => {
       </div>
 
       {/* Confirmation Modal */}
-      <div className={`modal ${isModalActive ? "is-active" : ""}`}>
+      {/* <div className={`modal ${isModalActive ? "is-active" : ""}`}>
         <div
           className="modal-background"
           onClick={() => setIsModalActive(false)}
@@ -91,7 +91,7 @@ const Footer = () => {
             </button>
           </footer>
         </div>
-      </div>
+      </div> */}
     </footer>
   );
 };
