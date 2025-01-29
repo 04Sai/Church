@@ -22,57 +22,80 @@ const Grades = () => {
     ],
   };
 
-  const renderGradeTable = (semesterData) => (
-    <div className="table-container">
-      <table className="table is-bordered is-striped is-hoverable is-fullwidth">
-        <thead>
-          <tr className="has-background-info-light">
-            <th className="has-text-info">Subject</th>
-            <th className="has-text-centered has-text-info">Midterms</th>
-            <th className="has-text-centered has-text-info">Finals</th>
-          </tr>
-        </thead>
-        <tbody>
-          {semesterData.map((grade, index) => (
-            <tr key={index}>
+  const renderGradeTable = (semesterData) => {
+    const averageGrade = semesterData.reduce((acc, grade) => 
+      acc + ((grade.midterms + grade.finals) / 2), 0) / semesterData.length;
+
+    return (
+      <div className="table-container">
+        <table className="table is-bordered is-striped is-hoverable is-fullwidth">
+          <thead>
+            <tr className="has-background-info-light">
+              <th className="has-text-info">Subject</th>
+              <th className="has-text-centered has-text-info">Midterms</th>
+              <th className="has-text-centered has-text-info">Finals</th>
+            </tr>
+          </thead>
+          <tbody>
+            {semesterData.map((grade, index) => (
+              <tr key={index}>
+                <td>
+                  <div className="is-flex is-align-items-center">
+                    <span className="tag is-info is-light mr-2">{grade.subject}</span>
+                    <span className="has-text-grey-dark">{grade.title}</span>
+                  </div>
+                </td>
+                <td className="has-text-centered">
+                  <span
+                    className={`tag is-medium ${
+                      grade.midterms >= 75 
+                        ? grade.midterms >= 90 
+                          ? "is-success" 
+                          : "is-info"
+                        : "is-danger"
+                    }`}
+                  >
+                    {grade.midterms}
+                  </span>
+                </td>
+                <td className="has-text-centered">
+                  <span
+                    className={`tag is-medium ${
+                      grade.finals >= 75 
+                        ? grade.finals >= 90 
+                          ? "is-success" 
+                          : "is-info"
+                        : "is-danger"
+                    }`}
+                  >
+                    {grade.finals}
+                  </span>
+                </td>
+              </tr>
+            ))}
+            <tr className="has-background-light">
               <td>
-                <div className="is-flex is-align-items-center">
-                  <span className="tag is-info is-light mr-2">{grade.subject}</span>
-                  <span className="has-text-grey-dark">{grade.title}</span>
-                </div>
+                <strong>Total Average</strong>
               </td>
-              <td className="has-text-centered">
+              <td colSpan="2" className="has-text-centered">
                 <span
                   className={`tag is-medium ${
-                    grade.midterms >= 75 
-                      ? grade.midterms >= 90 
+                    averageGrade >= 75 
+                      ? averageGrade >= 90 
                         ? "is-success" 
                         : "is-info"
                       : "is-danger"
                   }`}
                 >
-                  {grade.midterms}
-                </span>
-              </td>
-              <td className="has-text-centered">
-                <span
-                  className={`tag is-medium ${
-                    grade.finals >= 75 
-                      ? grade.finals >= 90 
-                        ? "is-success" 
-                        : "is-info"
-                      : "is-danger"
-                  }`}
-                >
-                  {grade.finals}
+                  {averageGrade.toFixed(2)}
                 </span>
               </td>
             </tr>
-          ))}
-        </tbody>
-      </table>
-    </div>
-  );
+          </tbody>
+        </table>
+      </div>
+    );
+  };
 
   return (
     <section className="section">

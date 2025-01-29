@@ -23,25 +23,25 @@ const Footer = () => {
               <span className="icon">
                 <FaChevronRight />
               </span>
-              <a href="#about">About</a>
+              <Link to="/#about">About</Link>
             </div>
             <div className="icon-text">
               <span className="icon">
                 <FaChevronRight />
               </span>
-              <a href="#boc">BOC</a>
+              <Link to="/#boc">BOC</Link>
             </div>
             <div className="icon-text">
               <span className="icon">
                 <FaChevronRight />
               </span>
-              <a href="#programs">Programs</a>
+              <Link to="/#programs">Programs</Link>
             </div>
             <div className="icon-text">
               <span className="icon">
                 <FaChevronRight />
               </span>
-              <a href="#history">History</a>
+              <Link to="/#history">History</Link>
             </div>
           </div>
           <div className="column is-5">

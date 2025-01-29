@@ -44,7 +44,7 @@ const Dashboard = () => {
                     {/* Tile 4 */}
                     <div className="tile is-parent">
                       <article className="tile is-child box notification is-success">
-                        <p className="title is-4">BSIT</p>
+                        <p className="title is-4">Not Enrolled</p>
                         <p className="subtitle">Course</p>
                       </article>
                     </div>
@@ -83,7 +83,7 @@ const Dashboard = () => {
                             <br />
                             For our valued returning students, it&apos;s time to
                             prepare for the upcoming semester. Online
-                            registration will open on July 15, 2023. Please log
+                            registration will open on July 15, 2024. Please log
                             in to the student portal using your credentials to
                             access the registration system. Follow the
                             instructions provided to select your courses and
@@ -117,7 +117,7 @@ const Dashboard = () => {
 
                           <ul>
                             <li>Holiday: Christmas Eve Candlelight Service</li>
-                            <li>Date: December 24, 2023 at 8:00 PM</li>
+                            <li>Date: December 24, 2024 at 8:00 PM</li>
                             <li>
                               Description: Celebrate the birth of Jesus Christ
                               in a special candlelight service filled with
