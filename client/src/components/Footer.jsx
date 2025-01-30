@@ -2,6 +2,17 @@ import { FaChevronRight } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
+  const handleHashLink = (e, id) => {
+    e.preventDefault();
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    } else {
+      // If element not found, first navigate to home then scroll
+      window.location.href = `/#${id}`;
+    }
+  };
+
   return (
     <footer>
       <div className="container">
@@ -9,7 +20,9 @@ const Footer = () => {
           <div className="column is-3">
             <p className="title is-3 has-text-weight-bold">BCBI</p>
             <p className="subtitle is-6">Brothers of Christ of Banneux, Inc.</p>
-            <p className="subtitle is-6">© Copyright BCBI. All Rights Reserved</p>
+            <p className="subtitle is-6">
+              © Copyright BCBI. All Rights Reserved
+            </p>
           </div>
           <div className="column is-4">
             <p className="is-6 has-text-weight-bold">Useful Links</p>
@@ -23,25 +36,36 @@ const Footer = () => {
               <span className="icon">
                 <FaChevronRight />
               </span>
-              <Link to="/#about">About</Link>
+              <a href="/#about" onClick={(e) => handleHashLink(e, "about")}>
+                About
+              </a>
             </div>
             <div className="icon-text">
               <span className="icon">
                 <FaChevronRight />
               </span>
-              <Link to="/#boc">BOC</Link>
+              <a href="/#boc" onClick={(e) => handleHashLink(e, "boc")}>
+                BOC
+              </a>
             </div>
             <div className="icon-text">
               <span className="icon">
                 <FaChevronRight />
               </span>
-              <Link to="/#programs">Programs</Link>
+              <a
+                href="/#programs"
+                onClick={(e) => handleHashLink(e, "programs")}
+              >
+                Programs
+              </a>
             </div>
             <div className="icon-text">
               <span className="icon">
                 <FaChevronRight />
               </span>
-              <Link to="/#history">History</Link>
+              <a href="/#history" onClick={(e) => handleHashLink(e, "history")}>
+                History
+              </a>
             </div>
           </div>
           <div className="column is-5">

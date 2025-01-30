@@ -56,7 +56,7 @@ const Login = () => {
           <div className="column is-3">
             <div className="box">
               <div className="container content is-large">
-                <p className="title is-3 center">Login</p>
+                <p className="title is-3 center">Logn</p>
                 <p className="subtitle is-6 center">Brothers of Christ of Banneux, Inc.</p>
                 {error && (
                   <div className="notification is-danger is-light">{error}</div>
@@ -99,7 +99,7 @@ const Login = () => {
                       <button className="button is-info has-text-weight-bold mr-4" type="submit">
                         Login
                       </button>
-                      <Link to="/register" className="button">
+                      <Link to="/register" className="button is-danger is-rounded p-6">
                         Register?
                       </Link>
                     </p>

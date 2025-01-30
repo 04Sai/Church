@@ -20,7 +20,7 @@ const AccountNav = () => {
 
   return (
     <>
-      <nav className="navbar is-info is-fixed-top is-spaced" role="navigation">
+      <nav className="navbar is-danger is-fixed-top is-spaced" role="navigation">
         <div className="navbar-brand mx-3 mb-2">
             <img src={logo} width="50" alt="Logo" />
         </div>
@@ -65,7 +65,7 @@ const AccountNav = () => {
                 Yes
               </button>
               <button className="button" onClick={() => setIsModalOpen(false)}>
-                No
+                Naur
               </button>
             </div>
           </div>

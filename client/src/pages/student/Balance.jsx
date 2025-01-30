@@ -77,7 +77,7 @@ const Balance = () => {
                               ₱{totalFee.toLocaleString(undefined, { minimumFractionDigits: 2 })}
                             </td>
                             <td className="has-text-centered">
-                              <span className="tag is-success">FULLY PAID</span>
+                              <span className="tag is-danger">FULLY PAID</span>
                             </td>
                           </tr>
                         </tbody>

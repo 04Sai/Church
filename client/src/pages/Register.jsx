@@ -59,7 +59,7 @@ const Register = () => {
           <div className="column is-4">
             <div className="box">
               <div className="container content is-large">
-                <p className="title is-3 center">Registration</p>
+                <p className="title is-3 center">Registriton</p>
                 <p className="subtitle is-6 center">
                   Brothers of Christ of Banneux, Inc.
                 </p>
@@ -116,10 +116,11 @@ const Register = () => {
                           style={{ paddingLeft: "2.5em" }}
                         >
                           <option value="" disabled>
-                            Select Gender
+                            Select aGender
                           </option>
                           <option value="male">Male</option>
                           <option value="female">Female</option>
+                          <option value="other">Decimal</option>
                           <option value="other">Prefer not to say</option>
                         </select>
                       </div>
@@ -204,7 +205,7 @@ const Register = () => {
                         placeholder="Confirm Password"
                         required
                       />
-                      <span className="icon is-small is-left">
+                      <span className="icon is-large is-centered">
                         <FaKey />
                       </span>
                     </p>
@@ -215,9 +216,12 @@ const Register = () => {
                         className="button is-info has-text-weight-bold mr-4"
                         type="submit"
                       >
-                        Register
+                        Registar
                       </button>
-                      <Link to="/login" className="button">
+                      <Link
+                        to="/login"
+                        className="button is-primary is-outlined pt-4"
+                      >
                         Login
                       </Link>
                     </p>

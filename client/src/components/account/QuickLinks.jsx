@@ -17,15 +17,13 @@ const QuickLinks = () => {
             </a>
           </figure>
           <figure className="image is-128x128 is-inline-block">
-            {/* <a href="https://fb.me/BOCPhilippines"> */}
-            <a>
+            <a href="https://fb.me/BOCPhilippines">
               <img src={bcbiboc} alt="" />
               BCBI Page
             </a>
           </figure>
           <figure className="image is-128x128 is-inline-block">
-            {/* <a href="https://fb.me/bocmemories"> */}
-            <a>
+            <a href="https://fb.me/bocmemories">
               <img src={bocmem} alt="" />
               BOC Memories
             </a>

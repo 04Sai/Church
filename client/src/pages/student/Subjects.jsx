@@ -77,11 +77,11 @@ const Subjects = () => {
                     <table className="table is-bordered is-striped is-hoverable is-fullwidth">
                       <thead>
                         <tr className="has-background-info-light">
-                          <th className="has-text-info">Subject</th>
-                          <th className="has-text-info">Room</th>
-                          <th className="has-text-info">Instructor</th>
-                          <th className="has-text-info">Schedule</th>
-                          <th className="has-text-info">Time</th>
+                          <th className="has-text-danger">Subject</th>
+                          <th className="has-text-primary">Room</th>
+                          <th className="has-text-link">Instructor</th>
+                          <th className="has-text-dark">Schedule</th>
+                          <th className="has-text-link">Time</th>
                         </tr>
                       </thead>
                       <tbody>
